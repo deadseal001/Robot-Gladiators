@@ -58,9 +58,14 @@ var fight = function (enemyName) {
 
 
 for (var i = 0; i < enemyNames.length; i++) {
-    debugger;
-    //window.alert(i);
-    var pickedEnemyName = enemyNames[i];
-    enemyHealth=50;
-    fight(pickedEnemyName);
+    if (playerHealth>0){
+        window.alert("Welcome to Battlebots! Round"+ (i+1));
+        //window.alert(i);
+        var pickedEnemyName = enemyNames[i];
+        enemyHealth=50;
+        //debugger;
+        fight(pickedEnemyName);
+    } else {
+        window.alert("You have lost tyour boot in battle! Game Over!")
+    }
 }
