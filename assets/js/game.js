@@ -36,7 +36,7 @@ var fight = function () {
             } else {
                 window.alert(playerName + " still has " + playerHealth + " health left.");
             }
-        } else if (promptFight === "skip" || promptFight ==="SKIP") {
+    } else if (promptFight === "skip" || promptFight ==="SKIP") {
             // confirm player wants to skip
             var confirmSkip = window.confirm("Are you sure you'd like to quit?");
             // if yes (true), leave fight
@@ -49,10 +49,10 @@ var fight = function () {
             else {
                 fight();
             }  
-        } else {
+    } else {
             window.alert("You need to choose a valid option. Try again!");
-        }
+    }
 };
 
-fight();
-fight();
+//fight();
+//fight();
