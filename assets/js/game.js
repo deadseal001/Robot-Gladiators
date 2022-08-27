@@ -141,7 +141,7 @@ var shop = function(){
   //use switch case to carry out action
   switch(shopOptionPrompt) {
     case 'REFILL':
-    case 'refill';
+    case 'refill':
       if (playerMoney >= 7 ) {
         window.alert("refilling player's health by 20 for 7 dollars.");
 
