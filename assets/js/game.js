@@ -5,8 +5,23 @@ var randomNumber = function(min, max){
   return value;
 }
 
+//function to set name
+var getPlayerName = function() {
+  var name ="";
+//**************
+//ADD LOOP here with PROMPT and condition
+//***************
+while (name === "" || name === null) {
+  name = prompt( "What is your robot's name?")
+}
+
+console.log("Your robot's name is "+ name);
+return name;
+}
+
+
 var playerInfo ={
-name: window.prompt("What is your robot's name?"),
+name: getPlayerName(),
 health: 100,
 attack: 10,
 money: 10,
@@ -59,7 +74,7 @@ var enemyInfo =[
 // var enemyAttack = 12;
 
 //fight function 
-var fight = function (enemy) {
+var fight = function(enemy) {
   console.log(enemy)
   while (playerInfo.health >0 && enemy.health > 0) {
     //fight or skip
@@ -128,10 +143,12 @@ playerInfo.reset();
 
   //other logic remians the same
   for (var i = 0; i < enemyInfo.length; i++) {
+    
     //if player is still alive, keep fighting
     if (playerInfo.health > 0){
       //let player know what round they are in
         window.alert("Welcome to Battlebots! Round"+ (i+1));
+        debugger;
         var pickedEnemyObj = enemyInfo[i];
         pickedEnemyObj.health = randomNumber(40, 60);
 
